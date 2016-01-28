@@ -1,0 +1,22 @@
+{
+  "name": "tellduslivefrontend",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "marcus@macke.se"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/xoloinc/telldusLiveFrontend",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9"
+  }
+}
