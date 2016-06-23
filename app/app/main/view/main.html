@@ -1,3 +1,18 @@
-<div>
-   {{hello}}
+<div class="row">
+    <ul> 
+        <li ng-repeat="sensor in sensors" ng-click="openSensor(sensor.id)">
+            {{sensor.name || sensor.id}}&nbsp;
+            type: {{sensor.model}}
+       </li>
+    </ul>
+</div>
+<div class="row">
+    <div ng-if="sensor">
+        <h2>{{sensor.name || sensor.id}}
+    </div>
+</div>
+<div class="row">
+    <div ng-if="sensor.history">
+        {{sensor.history}}
+    </div>
 </div>

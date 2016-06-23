@@ -3,12 +3,7 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('telldusGUI', [
-  'ui.router',
-  'telldusGUI.filters',
-  'telldusGUI.services',
-  'telldusGUI.directives',
-  'telldusGUI.controllers',
-  'telldusGUI.main'
+  'ui.router'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
   //
