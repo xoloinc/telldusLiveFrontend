@@ -1,14 +1,26 @@
 <div class="row">
-    <ul> 
-        <li ng-repeat="sensor in sensors" ng-click="openSensor(sensor.id)">
-            {{sensor.name || sensor.id}}&nbsp;
-            type: {{sensor.model}}
+    <ul class="list-group"> 
+        <li class="list-group-item" ng-repeat="sensor in sensors">
+           <a href="#" ng-click="openSensor(sensor.id)">
+                {{sensor.name || sensor.id}}&nbsp;
+            <small>type: {{sensor.model}}</small>
+            </a>
        </li>
     </ul>
 </div>
 <div class="row">
     <div ng-if="sensor">
         <h2>{{sensor.name || sensor.id}}
+    </div>
+</div>
+<div class="row">
+    <div>
+         <nvd3 options='options' data='data'></nvd3>
+    </div>
+</div>
+<div class="row">
+    <div ng-if="average">
+        Average {{average}}
     </div>
 </div>
 <div class="row">

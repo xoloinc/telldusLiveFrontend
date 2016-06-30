@@ -10,6 +10,7 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/normalize.css">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="components/nvd3/build/nv.d3.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -20,19 +21,31 @@
 
         <!-- Add your site or application content here -->
        <div ng-app="telldusGUI">
-           <nav>
-                <a ui-sref="main" translate> SENSORS </a>
+           <nav class="navbar navbar-inverse">
+               <div class="navbar-inner">
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="main" translate>SENSORS</a></li>
+                    </ul>
+                </div>
            </nav>
-           <section ui-view></section>
+           <div class="container" ui-view></div>
        </div>
-
+        <!-- compile vendor -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="components/underscore/underscore-min.js"></script>
+        <script src="components/moment/min/moment.min.js"></script>
         <script src="components/angular/angular.js"></script>
         <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="components/d3/d3.js"></script>
+        <script src="components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+        <script src="components/angular-nvd3/dist/angular-nvd3.js"></script>
+        
+        <!-- compile vendor -->
+        
+        <!-- compile app -->
         <script src="app/app.js"></script>
         <script src="app/config.js"></script>
         <script src="app/main/mainController.js"></script>
@@ -40,7 +53,7 @@
         <script src="app/directives.js"></script>
         <script src="app/filters.js"></script>
         <script src="app/services.js"></script>
-         
+         <!-- compile app -->
          
     </body>
 </html>
